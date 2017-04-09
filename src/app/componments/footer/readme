@@ -1,0 +1,24 @@
+此组件为elm底部的菜单栏，点击下面的菜单会有相应的路由到展示组件
+  流程：
+      初始化路由为index。
+      footer.componment.html
+                <li class="footer_flex_item" routerLink="/index" routerLinkActive="active">
+                    <span><img src="./../../../assets/svg/index.svg" alt=""></span>
+                    <span>外卖</span>
+                </li>
+     点击此li标签 配置 routerLink="/index"浏览器查找对应的路由
+     app-routing.module.ts
+                export const routes: Routes = [
+                    { path: 'index', component: FoodEnteryComponment },
+                    /**解决默认加载路由的问题 此处用重定向的方式解决初始化加载路由模板的问题 */
+                    { path: '', redirectTo: 'index', pathMatch: 'full'},
+
+                ];
+    通过以上路径找到要加载的组件FoodEnteryComponment
+    并初始化组件后放在路由插座后方
+    app.component.html
+         <header_tpl [showback]="false" [headTitle]="'选择城市'"></header_tpl>
+            <router-outlet></router-outlet>
+            <footer_tpl></footer_tpl>
+  初始化后组件会放在<router-outlet></router-outlet>的后面从而实现路由的导航。
+  

@@ -5,9 +5,13 @@
  */
 import { NgModule }             from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import {FoodEnteryComponment}from "./componments/index/foodentery/foodentery.component";
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'contact', pathMatch: 'full'},
+  
+  { path: 'index', component: FoodEnteryComponment },
+  /**解决默认加载路由的问题 此处用重定向的方式解决初始化加载路由模板的问题 */
+  { path: '', redirectTo: 'index', pathMatch: 'full'},
 
 ];
 /**

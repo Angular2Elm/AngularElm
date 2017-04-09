@@ -1,0 +1,9 @@
+.foodentery{
+    position: relative;
+    display: flex;
+    margin-right:0;  
+    flex-direction:row;
+    width:100%;
+    height:10rem;
+
+}

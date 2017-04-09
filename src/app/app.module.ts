@@ -7,17 +7,21 @@ import { AppComponent } from './app.component';
 import {HeaderComponent} from "./componments/header/header.component";
 import {ShowBackIconDirective} from "./componments/header/header.directive";
 import {FooterComponent}from "./componments/footer/footer.component";
+import {FoodEnteryComponment}from "./componments/index/foodentery/foodentery.component";
+import {AppRoutingModule} from "./app-routing.module";
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
+    FoodEnteryComponment,
     ShowBackIconDirective,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
