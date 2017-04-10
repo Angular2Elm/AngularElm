@@ -3,15 +3,21 @@
  * 定义路由模块，所有的路由都在此配置
  *
  */
-import { NgModule }             from '@angular/core';
+import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {FoodEnteryComponment}from "./componments/index/foodentery/foodentery.component";
-
+import { IndexComponent } from "./componments/index/index.component";
+import { FoundComponent } from "./componments/found/found.component";
+import { MyComponent } from "./componments/my/my.component";
+import { OrderComponent } from "./componments/order/order.component";
 export const routes: Routes = [
-  
-  { path: 'index', component: FoodEnteryComponment },
+
+  { path: 'index', component: IndexComponent },
+  { path: 'found', component: FoundComponent },
+  { path: 'my', component: MyComponent },
+  { path: 'order', component: OrderComponent },
   /**解决默认加载路由的问题 此处用重定向的方式解决初始化加载路由模板的问题 */
-  { path: '', redirectTo: 'index', pathMatch: 'full'},
+  { path: '', redirectTo: 'index', pathMatch: 'full' },
+
 
 ];
 /**
@@ -26,7 +32,7 @@ export const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
 /**
  * 特性模块从设计意图来区分
  * 特性模块用来提供了内聚的功能集合。 聚焦于应用的某个业务领域、用户工作流、某个基础设施（表单、HTTP、路由），或一组相关的工具集合。

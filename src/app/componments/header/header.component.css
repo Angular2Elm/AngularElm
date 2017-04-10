@@ -1,42 +1,34 @@
 #head_top {
-  position: fixed;
+  position: absolute;
   left:0;
   top:0;
   margin: 0 0;
   width:100%;
   height:2.95rem;
-  z-index: 100;
+  z-index: 5;
   background-color:#3190e8;
 }
+.head_goback img{
+   position: absolute;
+    top:50%;
+    left:5%;
+    margin-left: 0.1rem;
+    margin-top: -0.6rem;
+    width: 1.2rem;
+    height: 1.2rem;
+}
 .title_head{
+  margin: 0 0;
   position: absolute;
   font-weight: 400;
+  text-align: center;
   top:50%;
   left:50%;
   margin-left: -3rem;
-  margin-top: -0.4rem;
+  margin-top: -0.6rem;
   width: 6rem;
   height: 0.8rem;
   color: white;
+
 }
-.header_log{
-  color: white;
-  position: absolute;
-  left:1.2rem;
-  font-weight: 600;
-  top:50%;
-  font-size: 1rem;
-  width: 2.3rem;
-  height: 0.7rem;
-  transform: translateY(-50%);
-}
-.title_logic{
-  position: absolute;
-  font-weight: 400;
-  top:50%;
-  right:0%;
-  margin-top: -0.4rem;
-  width: 6rem;
-  height: 0.8rem;
-  color: white;
-}
+
