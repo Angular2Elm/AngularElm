@@ -1,9 +1,68 @@
 .foodentery{
-    position: relative;
+     position:relative;
+      height:11rem;
+     background-color: ghostwhite;
+     overflow-x: hidden;
+     
+}
+.food_items{
+    display: -webkit-flex;
     display: flex;
+    position:absolute;
     margin-right:0;  
     flex-direction:row;
+    flex-wrap:wrap;
     width:100%;
     height:10rem;
+    background-color: ghostwhite;
+}
+.items_active{
 
+z-index: 1;
+}
+
+.foodentery_item{
+    
+    width: 25%;
+    height:50%;
+}
+a{
+    display: -webkit-flex;
+    display: flex;
+    flex-direction:column;
+    color: grey;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.5rem;
+}
+imgcontent{
+    flex-grow: 8;
+}
+food_title{
+    flex-grow: 2;
+}
+img{
+    width: 3rem;
+    height: 3rem;
+}
+.mint-swipe-indicators {
+    position: absolute;
+    bottom: 0px;
+
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+.mint-swipe-indicator {
+    width: 5px;
+    height: 5px;
+    display: inline-block;
+    border-radius: 100%;
+    background: #000;
+    opacity: .2;
+    margin: 0 3px;
+}
+.is-active {
+    background-color: #000;
+    opacity: .6;
 }

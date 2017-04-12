@@ -1,5 +1,5 @@
 .footer_flex_box{
-    position: absolute;
+    position: fixed;
     bottom: 0;
     display: flex;
     left:0;
@@ -23,7 +23,7 @@ li{
      flex-grow: 1;
 }
 .footer_flex_item span{
-    font-size: 2px;
+    font-size: 0.5rem;
 }
 .footer_flex_item img{
     width:1.2rem;

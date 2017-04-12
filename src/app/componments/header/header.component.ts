@@ -2,7 +2,7 @@
  * Created by 31618 on 2017/4/1.
  */
 import {Component, Input, OnInit} from "@angular/core";
-
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'header_tpl',
@@ -14,11 +14,13 @@ export class HeaderComponent implements OnInit {
   @Input() showback: boolean;
   @Input() title:string;
   @Input()  headTitle: string;
-  constructor() {
-
-
+  location: Location;
+  constructor(location:Location) {
+    this.location=location;
   }
-
+  backClick(){
+   this.location.back();
+  }
   ngOnInit() {
 
   }
