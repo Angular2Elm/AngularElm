@@ -1,32 +1,36 @@
 
-import { Directive, ElementRef } from "@angular/core";
+import { Directive, ElementRef ,OnInit} from "@angular/core";
 @Directive({
     selector: '[scoller]',
 })
-export class FoodEnteryDirective {
-    private startX: any;
-    private startY: any;
-    private movestart: any;
-    private clientX: any;
+export class FoodEnteryDirective implements OnInit{
+   
+    private el: ElementRef;
+    
 
-    constructor(private el: ElementRef) {
-        console.log(el.nativeElement.childNodes);
-        console.log("@style", el.nativeElement.style);
+    constructor(el: ElementRef) {
+      this.el=el;
+     
+
+    }
+   ngOnInit(){
+      
+       var el=this.el;
+       //这两个this不是同一个
         el.nativeElement.addEventListener("touchstart", function (event: TouchEvent) {
             this.startX = event.changedTouches["0"].pageX;
             this.startY = event.changedTouches["0"].pageY;
             this.movestart = this.startX;
             this.clientX = event.view.innerWidth;
-
         });
         el.nativeElement.addEventListener("touchend", function (event: TouchEvent) {
+           
             var distanceX = event.changedTouches["0"].pageX - this.startX;
             let elActive: any;
             let elNotActive: any;
             let indicatorP: any;
             let indicatorActive: any;
             let indicatorNotActive: any;
-
             for (var i = 0; i < el.nativeElement.childNodes.length; i++) {
                 if (el.nativeElement.childNodes[i].className == 'food_items items_active') {
                     elActive = el.nativeElement.childNodes[i];
@@ -74,7 +78,7 @@ export class FoodEnteryDirective {
 
         el.nativeElement.addEventListener("touchmove", function (event: TouchEvent) {
             //判断滑动方向
-
+            
             var distanceX = event.changedTouches["0"].pageX - this.startX;
             if (event.changedTouches["0"].pageX > this.movestart) {
                 for (var i = 0; i < el.nativeElement.childNodes.length; i++) {
@@ -115,7 +119,6 @@ export class FoodEnteryDirective {
 
 
         }, false);
-
-    }
+   }
 
 }

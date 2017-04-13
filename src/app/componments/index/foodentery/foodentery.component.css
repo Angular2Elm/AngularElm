@@ -1,7 +1,7 @@
 .foodentery{
      position:relative;
-      height:11rem;
-     background-color: ghostwhite;
+      height:9rem;
+     background-color: #FFFFFF;
      overflow-x: hidden;
      
 }
@@ -13,8 +13,8 @@
     flex-direction:row;
     flex-wrap:wrap;
     width:100%;
-    height:10rem;
-    background-color: ghostwhite;
+    height:8rem;
+    background-color: #FFFFFF;
 }
 .items_active{
 
@@ -33,34 +33,36 @@ a{
     color: grey;
     text-align: center;
     text-decoration: none;
-    font-size: 0.5rem;
+    font-size: .12rem;
+  
 }
-imgcontent{
+
+.imgcontent{
     flex-grow: 8;
 }
-food_title{
+.food_title{
     flex-grow: 2;
+    transform: scale(0.8) ;
 }
 img{
-    width: 3rem;
-    height: 3rem;
+    width: 2.5rem;
+    height: 2.5rem;
 }
 .mint-swipe-indicators {
     position: absolute;
     bottom: 0px;
-
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
 }
 .mint-swipe-indicator {
-    width: 5px;
-    height: 5px;
+    width: 4px;
+    height: 4px;
     display: inline-block;
     border-radius: 100%;
     background: #000;
     opacity: .2;
-    margin: 0 3px;
+    margin: 0 0;
 }
 .is-active {
     background-color: #000;
