@@ -7,7 +7,6 @@ export class FoodEnteryDirective implements OnInit{
    
     private el: ElementRef;
     
-
     constructor(el: ElementRef) {
       this.el=el;
      
